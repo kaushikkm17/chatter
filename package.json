@@ -1,0 +1,19 @@
+{
+  "name": "chatter",
+  "version": "1.0.0",
+  "description": "A real-time messaging application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaushikkm17/chatter.git"
+  },
+  "author": "Kaushik Mondal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaushikkm17/chatter/issues"
+  },
+  "homepage": "https://github.com/kaushikkm17/chatter#readme"
+}
