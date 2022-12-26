@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatter</title>
+</head>
+<body>
+    <%- include('./partials/header.ejs') %>
+    <main>
+        <section id="call-to-action">
+            <h1 id="main-header">Chatter</h1>
+            <p>This is the description of the app</p>
+            <button>Get Started</button>
+            <a href="">learn more</a>
+        </section>
+        <section>
+            <h3 id="tech-header">Tech Used</h3>
+        </section>
+        
+    </main>
+    <%- include('./partials/footer.ejs') %>
+    <style>
+        #navbar>ul{
+            display:flex;
+            list-style: none;
+            justify-content: right;
+        }
+        #navbar>ul>li{
+            padding: 5px 20px;
+        }
+        #call-to-action{
+            margin: 120px 30px;
+        }
+        #main-header{
+            font-size:70px;
+            margin-bottom: -20px;
+            margin-left: -8px;
+        }
+        #tech-header{
+            margin-top: 80px;
+        }
+        footer>p{
+            font-size: 12px;
+            text-align: center;
+        }
+    </style>
+</body>
+</html>
