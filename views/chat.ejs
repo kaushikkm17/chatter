@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <ul>
+                <li>back to chats</li>
+                <li>chatting with</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="messages">
+            <div class="your-msg">text message text message text message text message</div>
+            <div class="their-msg">text message</div>
+            <div class="your-msg">text message text message text message text message text message text message text message</div>
+            <div class="their-msg">text message text message</div>
+            <div class="your-msg">text message text message text message text message text message text message text message text message text message</div>
+            <div class="their-msg">text</div>
+        </section>
+        <section id="send-msg">
+            <input type="text">
+            <button>Send</button>
+        </section>
+        
+    </main>
+    <style>
+        #navbar>ul{
+            display:flex;
+            list-style: none;
+            padding: 0;
+        }
+        #navbar>ul>li{
+            padding: 5px 20px;
+        }
+        #messages{
+            margin: 0 auto;
+            width:330px;
+        }
+        #send-msg{
+            margin-top: 20px;
+            padding: 5px;
+            background-color: cadetblue;
+        }
+        #send-msg>input{
+            width:auto;
+        }
+        div{
+            padding: 5px;
+            border-radius: 3px;
+            width: fit-content;
+            max-width: 200px;
+            text-align: left;
+        }
+        div.your-msg{
+            background-color: cornflowerblue;
+            margin: 5px 5px 5px auto;
+        }
+        div.their-msg{
+            background-color: gray;
+            margin: 5px auto 5px 5px;
+        }
+        footer>p{
+            font-size: 12px;
+            text-align: center;
+        }
+    </style>
+</body>
+</html>

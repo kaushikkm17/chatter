@@ -22,7 +22,7 @@ app.get('/:id', (req, res) => {
     res.render('allchats.ejs')
 })
 app.get('/:id/:user', (req, res) => {
-    res.render('chats.ejs')
+    res.render('chat.ejs')
 })
 
 
