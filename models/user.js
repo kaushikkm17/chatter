@@ -7,11 +7,18 @@ const userSchema = new Schema({
     password: { type: String, required: true, minLength: 8 },
     textsreceived: [
       {
-        type: mongoose.Schema.Types.ObjectId,
+        type: Schema.Types.ObjectId,
         ref: "TextReceived",
       },
       { timestamps: true },
     ],
+    textssent: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "TextSent",
+      },
+      { timestamps: true },
+    ]
 });
 
 module.exports = mongoose.model('User', userSchema)

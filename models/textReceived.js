@@ -10,5 +10,5 @@ const textReceivedSchema = new Schema({
     message: String,
 });
 
-module.exports = mongoose.model('textReceived', textReceivedSchema)
+module.exports = mongoose.model('TextReceived', textReceivedSchema)
   

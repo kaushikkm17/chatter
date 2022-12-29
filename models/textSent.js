@@ -10,5 +10,5 @@ const textSentSchema = new Schema({
     message: String,
 });
 
-module.exports = mongoose.model('textSent', textSentSchema)
+module.exports = mongoose.model('TextSent', textSentSchema)
   

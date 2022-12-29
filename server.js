@@ -7,8 +7,9 @@ const app = express()
 const PORT = process.env.PORT
 
 //middleware
+app.use(express.urlencoded({extended: true}))
 
-//ROUTES
+//ROUTES index, new, delete, update, create, edit, show
 app.get('/', (req, res) => {
     res.render('index.ejs')
 })
@@ -18,10 +19,15 @@ app.get('/signin', (req, res) => {
 app.get('/signup', (req, res) => {
     res.render('signup.ejs')
 })
+app.post('/signup', (req, res) => {
+    console.log(req.body)
+    
+    res.redirect('/signup')
+})
 app.get('/:id', (req, res) => {
     res.render('allchats.ejs')
 })
-app.get('/:id/:user', (req, res) => {
+app.get('/:id/:chattingwith', (req, res) => {
     res.render('chat.ejs')
 })
 
@@ -30,4 +36,4 @@ app.get('/:id/:user', (req, res) => {
 
 
 //listener
-app.listen(process.env.PORT || 3000, () => {console.log('listening...')})
+app.listen(process.env.PORT || 3000, () => console.log('listening...'))
