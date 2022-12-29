@@ -9,6 +9,16 @@ const PORT = process.env.PORT
 //middleware
 app.use(express.urlencoded({extended: true}))
 
+//database config
+mongoose.connect(process.env.DATABASE_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
+const DB = mongoose.connection
+DB.on('error', (err) => console.log(err))
+DB.on('connected', () => console.log('mongo is connected...'))
+DB.on('disconnected', () => console.log('mongo is disconnected...'))
+
 //ROUTES index, new, delete, update, create, edit, show
 app.get('/', (req, res) => {
     res.render('index.ejs')
