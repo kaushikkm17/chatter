@@ -5,11 +5,14 @@ const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 const app = express()
 const PORT = process.env.PORT
+const User = require('./models/user')
+const user = require('./models/user')
+const { findById } = require('./models/user')
 
 //middleware
 app.use(express.urlencoded({extended: true}))
 
-//database config
+//database configuration
 mongoose.connect(process.env.DATABASE_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -31,8 +34,18 @@ app.get('/signup', (req, res) => {
 })
 app.post('/signup', (req, res) => {
     console.log(req.body)
+    User.create(req.body, () => {
+        res.redirect('/signup')
+    })
+})
+app.post('/signin', (req, res) => {
+    //if the username and password are in the database
+    //  res.redirect :username
     
-    res.redirect('/signup')
+    User.find({username:"hfuodsh", password: "fosdhfuhds"}, () => {
+        res.redirect(`/${req.body.username}`)
+    })
+    //if(User.findById)
 })
 app.get('/:id', (req, res) => {
     res.render('allchats.ejs')
