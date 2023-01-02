@@ -39,21 +39,17 @@ app.post('/signup', (req, res) => {
     })
 })
 app.post('/signin', (req, res) => {
-    //if the username and password are in the database
-    //  res.redirect :username
-    
-    User.find({username:"hfuodsh", password: "fosdhfuhds"}, () => {
-        res.redirect(`/${req.body.username}`)
+    User.find({username:req.body.username, password: req.body.password}, (err, foundUser) => {
+        res.redirect(`/${foundUser[0].username}`)
     })
-    //if(User.findById)
 })
-app.get('/:id', (req, res) => {
+app.get('/:username', (req, res) => {
+
     res.render('allchats.ejs')
 })
-app.get('/:id/:chattingwith', (req, res) => {
+app.get('/:username/:chattingwith', (req, res) => {
     res.render('chat.ejs')
 })
-
 
 
 
