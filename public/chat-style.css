@@ -1,0 +1,39 @@
+#navbar>ul{
+    display:flex;
+    list-style: none;
+    padding: 0;
+}
+#navbar>ul>li{
+    padding: 5px 20px;
+}
+#messages{
+    margin: 0 auto;
+    width:330px;
+}
+#send-msg{
+    margin-top: 20px;
+    padding: 5px;
+    background-color: cadetblue;
+}
+#send-msg>input{
+    width:auto;
+}
+div{
+    padding: 5px;
+    border-radius: 3px;
+    width: fit-content;
+    max-width: 200px;
+    text-align: left;
+}
+div.your-msg{
+    background-color: cornflowerblue;
+    margin: 5px 5px 5px auto;
+}
+div.their-msg{
+    background-color: gray;
+    margin: 5px auto 5px 5px;
+}
+footer>p{
+    font-size: 12px;
+    text-align: center;
+}

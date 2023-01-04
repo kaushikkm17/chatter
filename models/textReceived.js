@@ -5,7 +5,10 @@ const textReceivedSchema = new Schema({
     from: {
         type: Schema.Types.ObjectId,
         ref: 'User',
-        timestamps:true
+    },
+    createdAt: {
+        type: Date,
+        default: () => Date.now(),
     },
     message: String,
 });

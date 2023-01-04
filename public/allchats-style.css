@@ -1,0 +1,28 @@
+#navbar>ul{
+    display:flex;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0;
+}
+#navbar>ul>li{
+    padding: 5px 20px;
+}
+main{
+    height:400px;
+    overflow:auto;
+}
+div{
+    margin: 1px auto;
+    padding: 5px;
+    width: 300px;
+    height:75px;
+    background-color: aqua;
+    border-radius: 10px;
+}
+h4{
+    margin:0;
+}
+footer>p{
+    font-size: 12px;
+    text-align: center;
+}

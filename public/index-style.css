@@ -1,0 +1,23 @@
+#navbar>ul{
+    display:flex;
+    list-style: none;
+    justify-content: right;
+}
+#navbar>ul>li{
+    padding: 5px 20px;
+}
+#call-to-action{
+    margin: 120px 30px;
+}
+#main-header{
+    font-size:70px;
+    margin-bottom: -20px;
+    margin-left: -8px;
+}
+#tech-header{
+    margin-top: 80px;
+}
+footer>p{
+    font-size: 12px;
+    text-align: center;
+}
