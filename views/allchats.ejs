@@ -11,7 +11,7 @@
     <header>
         <nav id="navbar">
             <ul>
-                <li>Welcome, <%=user.username%></li>
+                <li>Welcome</li>
                 <li>=</li>
             </ul>
         </nav>
@@ -19,7 +19,7 @@
     <main>
         
         <div>
-            <h4>User1</h4>
+            <h4>username1</h4>
             <p>last text message...</p>
         </div>
         <div>
@@ -78,6 +78,14 @@
             <h4>User1</h4>
             <p>last text message...</p>
         </div>
+        <!-- <form action="/?_method=DELETE" method="POST">
+            <button type="submit">DELETE ACCOUNT</button>
+        </form>     -->
     </main>
+    <script>
+        document.querySelector('main', e => {
+            if(e.target.tagName === 'div') {}
+        })
+    </script>
 </body>
 </html>
