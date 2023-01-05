@@ -48,10 +48,13 @@
             <button type="submit">DELETE ACCOUNT(cannot be undone)</button>
         </form>    
     </main>
-    <!-- <script>
-        document.querySelector('main', e => {
-            if(e.target.tagName === 'div') {}
+    <script>
+        document.querySelector('main').addEventListener('click', e => {
+            if(e.target.matches('div')) {
+                const talkingTo = e.target.querySelector('h4').textContent
+                window.location.assign(`/<%=username%>/${talkingTo}`)
+            }
         })
-    </script> -->
+    </script>
 </body>
 </html>
