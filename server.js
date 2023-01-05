@@ -55,18 +55,12 @@ app.route('/signup')
 
 app.route('/:username')
     .get((req, res) => {
-        res.render('allchats.ejs')
-        // User.find({username: req.params.username},
-        //     (err, foundUser) => {
-                
-        //         res.render("allchats.ejs", { user: foundUser[0].username })
-                
-        //     }
-        // )
+        res.render('allchats.ejs', {username: req.params.username})
     })
     .delete((req, res) => {
-        User.deleteOne({username: req.params.username})
-})
+        User.findOneAndRemove({username: req.params.username})
+            .then(res.redirect('/'))
+    })
 app.get("/:username/:chattingwith", (req, res) => {
     res.render("chat.ejs")
 })
