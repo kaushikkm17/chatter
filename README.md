@@ -5,6 +5,7 @@ A real-time messaging application
 - HTML5
 - CSS3
 - JavaScript
+- EJS
 - Node.JS
 - Express.JS
 - MongoDB
