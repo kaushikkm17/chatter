@@ -1,11 +1,3 @@
-#navbar>ul{
-    display:flex;
-    list-style: none;
-    padding: 0;
-}
-#navbar>ul>li{
-    padding: 5px 20px;
-}
 #messages{
     margin: 0 auto;
     width:330px;
@@ -32,8 +24,4 @@ div.your-msg{
 div.their-msg{
     background-color: gray;
     margin: 5px auto 5px 5px;
-}
-footer>p{
-    font-size: 12px;
-    text-align: center;
 }

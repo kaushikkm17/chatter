@@ -1,23 +1,89 @@
+body{
+    margin: 0;
+}
+header{
+    background-color: rgba(145, 183, 255, 0.95);
+}
 #navbar>ul{
+    margin: 0;
     display:flex;
     list-style: none;
-    justify-content: right;
+    justify-content: flex-end;
 }
 #navbar>ul>li{
-    padding: 5px 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+#navbar>ul>li:hover{
+    background-color: rgb(255, 153, 117);  
+    transition: 500ms;  
+}
+#navbar>ul>li>a{
+    font-size: 16px;
+    text-decoration: none;
+    color:rgb(52, 52, 52);
 }
 #call-to-action{
-    margin: 120px 30px;
+    margin: 120px 20px;
+}
+#call-to-action>p{
+    font-size: 16px;
 }
 #main-header{
-    font-size:70px;
-    margin-bottom: -20px;
-    margin-left: -8px;
+    font-size:60px;
+    margin-bottom: -18px;
+    margin-left: -2px;
+    text-shadow: 2px 2px rgba(145, 183, 255, 0.95);
 }
 #tech-header{
     margin-top: 80px;
 }
-footer>p{
+#get-started-btn{
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 16px;
+    background-color: rgba(145, 183, 255, 0.95);
+    border: none;
+    border-radius: 5px;
+    color: rgb(52, 52, 52);
+}
+#get-started-btn:hover{
+    background-color: rgb(255, 153, 117);  
+    transition: 500ms;
+}
+footer{
+    color:rgb(52, 52, 52);
+    width: 100%;
+    margin: 0;
+    background-color: rgba(145, 183, 255, 0.95);
     font-size: 12px;
+    position: absolute;
+    bottom: 0;
+}
+footer>p{
     text-align: center;
+}
+@media only screen and (min-width: 500px){
+    #navbar>ul>li{
+        padding: 14px 28px;
+    }
+    #navbar>ul>li>a{
+        font-size: 20px;
+    }
+    #call-to-action{
+        margin: 120px 100px;
+    }
+    #main-header{
+        font-size: 120px;
+        text-shadow: 3px 3px rgba(145, 183, 255, 0.95);
+    }
+    #call-to-action>p{
+        font-size: 24px;
+    }
+    #get-started-btn{
+        padding: 14px 20px;
+    }
+
 }
