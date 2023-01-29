@@ -1,3 +1,13 @@
+main{
+    margin: 20px auto;
+}
+h1{
+    text-align: center;
+    background-color: rgba(145, 183, 255, 0.95);
+    color: rgb(52, 52, 52);
+    padding: 5px 0px;
+    margin-bottom: 30px;
+}
 #messages{
     margin: 0 auto;
     width:330px;
@@ -5,10 +15,13 @@
 #send-msg{
     margin-top: 20px;
     padding: 5px;
-    background-color: cadetblue;
+    background-color: rgba(145, 183, 255, 0.95);
 }
 #send-msg>input{
-    width:auto;
+    width:230px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
 }
 div{
     padding: 5px;
@@ -24,4 +37,41 @@ div.your-msg{
 div.their-msg{
     background-color: gray;
     margin: 5px auto 5px 5px;
+}
+#back-btn{
+    font-weight: bold;
+    padding: 5px 20px;
+    margin: 5px 20px;
+    cursor:pointer;
+    border:none;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: rgb(255, 153, 117);  
+    transition: 500ms;  
+}
+button[type='submit']{
+    font-weight: bold;
+    padding: 6px 20px;
+    border:none;
+    cursor:pointer;
+    border-radius: 5px;
+    width:80px;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+footer{
+    color:rgb(52, 52, 52);
+    width: 100%;
+    margin: 0;
+    background-color: rgba(145, 183, 255, 0.95);
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+}
+footer>p{
+    text-align: center;
 }

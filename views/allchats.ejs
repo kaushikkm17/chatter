@@ -9,9 +9,11 @@
     <title>Messages</title>
 </head>
 <body>
+
     <header>
         <nav id="navbar">
             <ul>
+                <li><a href="/">Home</a></li>
             </ul>
         </nav>
     </header>
@@ -39,13 +41,9 @@
         <div>
             <h4></h4>
             <p></p>
-        </div>
-        
-        
-        <form action="/<%=username%>?_method=DELETE" method="POST">
-            <button type="submit">DELETE ACCOUNT(cannot be undone)</button>
-        </form>    
+        </div>  
     </main>
+    <%- include('./partials/footer.ejs') %>
     <script>
         document.querySelector('main').addEventListener('click', e => {
             if(e.target.matches('div')) {

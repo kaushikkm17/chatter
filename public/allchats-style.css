@@ -1,4 +1,5 @@
 main{
+    margin: 100px auto;
     height:400px;
     overflow:auto;
 }
@@ -7,7 +8,7 @@ div{
     padding: 5px;
     width: 300px;
     height:75px;
-    background-color: aqua;
+    background-color: rgb(221, 221, 221);
     border-radius: 10px;
 }
 h4{

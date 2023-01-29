@@ -12,13 +12,14 @@
     <header>
         <nav id="navbar">
             <ul>
-                <li>back to chats</li>
-                <li>chatting with</li>
+                <li><a href="/">Home</a></li>
             </ul>
         </nav>
     </header>
     <main>
+        <button id="back-btn"><a href="">Back to chats</a></button>
         <section id="messages">
+            <h1>Username</h1>
             <div class="your-msg">text message text message text message text message</div>
             <div class="their-msg">text message</div>
             <div class="your-msg">text message text message text message text message text message text message text message</div>
@@ -31,5 +32,6 @@
             </form>
         </section>
     </main>
+    <%- include('./partials/footer.ejs') %>
 </body>
 </html>
