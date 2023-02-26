@@ -18,21 +18,14 @@
         </nav>
     </header>
     <main>
-        <a href="/pages/new">
-           <button>Create New Page</button>
-       </a>
-       <div>
-        <h2>Cats</h2>
-       </div>
+        <form action="/pages/new" method="post">
+            <label>
+                Name of Page
+                <input type="text" name="name">
+            </label>
+            <input type="submit" value="Create Page">
+        </form>
     </main>
     <%- include('./partials/footer.ejs') %>
-    <script>
-        document.querySelector('main').addEventListener('click', e => {
-            if(e.target.matches('div')) {
-                const talkingTo = e.target.querySelector('h4').textContent
-                window.location.assign(`/<%=username%>/${talkingTo}`)
-            }
-        })
-    </script>
 </body>
 </html>

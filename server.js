@@ -6,6 +6,8 @@ const methodOverride = require('method-override')
 const app = express()
 const PORT = process.env.PORT
 const User = require('./models/user.js')
+const Page = require('./models/page.js')
+const Message = require('./models/message.js')
 
 
 
@@ -60,14 +62,24 @@ app.route('/signup')
     })
 
 app.route('/:username')
-    .get((req, res) => {
-        const chatWith = req.params.username === 'username1' ? 'username1' : 'username2'
-        res.render('allchats.ejs', { username: req.params.username, chatWith})
+    .get(async (req, res) => {
+        
+        const found = await User.findOne({username:req.params.username})
+        
+        console.log(found)
+        res.render('allchats.ejs', { username: req.params.username, found})
     })
     .delete((req, res) => {
         User.findOneAndRemove({ username: req.params.username }).then(
             res.redirect('/')
         )
+    })
+app.route('/pages/new')
+    .get(async (req, res) => {
+        res.render('newPage.ejs')
+    })
+    .post(async (req, res) => {
+        res.redirect('/username')
     })
 app.route('/:username/:chattingwith')
     .get((req, res) => {

@@ -11,6 +11,14 @@ div{
     background-color: rgb(221, 221, 221);
     border-radius: 10px;
 }
-h4{
-    margin:0;
+h2{
+    text-align: center;
+}
+button{
+    font-weight: bold;
+    padding: 5px 20px;
+    margin: 5px 20px;
+    cursor:pointer;
+    border:none;
+    border-radius: 5px;
 }
